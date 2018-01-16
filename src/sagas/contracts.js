@@ -12,6 +12,6 @@ function* getContracts(action) {
    }
 }
 
-function* contractsSaga() {
+export default function* contractsSaga() {
   yield takeLatest(REQUEST_CONTRACTS, getContracts)
 }

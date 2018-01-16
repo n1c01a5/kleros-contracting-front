@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 
-import { REQUEST_BALANCE, receiveBalance } from '../actions/actions'
+import { REQUEST_BALANCE, receiveBalance } from '../actions/profile'
 import { fetchProfile } from './utils/profile'
 
 function* getBalance(action) {

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import data from './data'
 import balance from './balance'
+import contracts from './contracts'
 
 export default combineReducers({
-  data,
-  balance
+  balance,
+  contracts
 })
