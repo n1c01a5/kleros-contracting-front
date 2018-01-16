@@ -1,4 +1,4 @@
-import { RECEIVE_BALANCE } from '../actions'
+import { RECEIVE_BALANCE } from '../actions/profile'
 
 export default (state=0, {type, balance}) => {
   switch(type) {

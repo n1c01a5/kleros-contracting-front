@@ -1,17 +1,17 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 
-import { REQUEST_BALANCE, receiveBalance } from '../actions'
-import { fetchProfile } from './utils/profile'
+import { REQUEST_CONTRACTS, receiveContracts } from '../actions/contracts'
+import { fetchContracts } from './utils/contracts'
 
-function* getBalance(action) {
+function* getContracts(action) {
    try {
-      const balance = yield call(fetchProfile)
-      yield put(receiveBalance(balance))
+      const contracts = yield call(fetchContracts)
+      yield put(receiveContracts(contracts))
    } catch (e) {
       console.log(e)
    }
 }
 
-function* mySaga() {
-  yield takeLatest(REQUEST_BALANCE, getBalance)
+function* contractsSaga() {
+  yield takeLatest(REQUEST_CONTRACTS, getContracts)
 }

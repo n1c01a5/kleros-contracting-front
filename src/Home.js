@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { requestBalance } from './actions'
-import { requestApiData } from './actions'
+import { requestBalance } from './actions/actions'
+import { requestApiData } from './actions/actions'
 
 class Home extends PureComponent {
   componentDidMount() {
