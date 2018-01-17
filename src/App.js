@@ -1,10 +1,13 @@
-import React from 'react';
+import React from 'react'
 import { Provider } from 'react-redux'
 
 import store from './store'
+import Initializer from './Initializer'
 import Home from './Home'
 
 export default () =>
   <Provider store={store}>
-    <Home />
+    <Initializer>
+      <Home />
+    </Initializer>
   </Provider>
