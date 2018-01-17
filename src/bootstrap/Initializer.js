@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import React, { PureComponent } from 'react'
 
-import getWeb3 from './utils/getWeb3'
+import getWeb3 from '../utils/getWeb3'
 import RequiresMetaMask from './requiresMetaMask'
 
 class Initializer extends PureComponent {

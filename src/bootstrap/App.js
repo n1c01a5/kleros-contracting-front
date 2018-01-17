@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 import Initializer from './Initializer'
-import Home from './Home'
+import Home from '../containers/Home'
 
 export default () =>
   <Provider store={store}>

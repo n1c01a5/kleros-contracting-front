@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { requestBalance } from './actions/profile'
-import { requestContracts } from './actions/contracts'
+import { requestBalance } from '../actions/profile'
+import { requestContracts } from '../actions/contracts'
 
 class Home extends PureComponent {
   componentDidMount() {
