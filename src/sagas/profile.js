@@ -1,9 +1,9 @@
-import { call, put, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest, fork } from 'redux-saga/effects'
 
 import { REQUEST_BALANCE, receiveBalance } from '../actions/profile'
 import { fetchProfile } from './utils/profile'
 
-function* getBalance(action) {
+export function* getBalance(action) {
    try {
       const balance = yield call(fetchProfile)
       yield put(receiveBalance(balance))
@@ -13,5 +13,5 @@ function* getBalance(action) {
 }
 
 export default function* balanceSaga() {
-  yield takeLatest(REQUEST_BALANCE, getBalance)
+  yield fork(takeLatest, REQUEST_BALANCE, getBalance)
 }
