@@ -9,7 +9,7 @@ describe('Profile saga', () => {
 
   const generator = balanceSaga()
 
-  it('check if balance is equal 42', () => {
+  it('check if this saga loads the REQUEST_BALANCE action', () => {
     expect(
       generator.next().value
     ).toEqual(
